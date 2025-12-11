@@ -1,0 +1,167 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ROOT COLORS */
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --accent: #ff4d6d;
+}
+
+body.dark {
+  --bg: #0f0f0f;
+  --text: #f1f1f1;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s ease;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+nav a {
+  margin: 0 15px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#themeToggle {
+  padding: 8px 14px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: white;
+}
+
+/* FILTER BUTTONS */
+.filters {
+  text-align: center;
+  padding: 30px;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  border: none;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  background: #eee;
+  transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* GALLERY GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 40px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  width: 60%;
+  border-radius: 10px;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+/* CONTACT FORM */
+.contact {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+form input,
+form textarea {
+  width: 60%;
+  padding: 12px;
+  margin: 10px auto;
+  display: block;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+}
+
+button {
+  padding: 10px 20px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#formStatus {
+  margin-top: 15px;
+  font-weight: 600;
+}
